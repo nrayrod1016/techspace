@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import styles from './SignupForm.module.css'
+// import styles from './SignupForm.module.css'
 import * as authService from '../../services/authService'
 
 const SignupForm = (props) => {
@@ -38,15 +38,12 @@ const SignupForm = (props) => {
   }
 
   return (
-    <form
-      autoComplete="off"
-      onSubmit={handleSubmit}
-      className={styles.container}
+  <form
+    autoComplete="off"
+    onSubmit={handleSubmit}
     >
-      <div className={styles.inputContainer}>
-        <label htmlFor="name" className={styles.label}>
-          Name
-        </label>
+    <div class='mb-3'>
+      <label htmlFor="name" className=''>Name</label>
         <input
           type="text"
           autoComplete="off"
@@ -54,32 +51,34 @@ const SignupForm = (props) => {
           value={name}
           name="name"
           onChange={handleChange}
+          class="form-control"
         />
-      </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="email" className={styles.label}>Email</label>
-        <input
-          type="text"
+    </div>
+  <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="text"
           autoComplete="off"
           id="email"
-          value={email}
+          value={formData.email}
           name="email"
-          onChange={handleChange}
+          onChange={handleChange} 
+          class="form-control"
+          aria-describedby="emailHelp" 
         />
-      </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="password" className={styles.label}>Password</label>
-        <input
-          type="password"
+  </div>
+  <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input  type="password"
           autoComplete="off"
           id="password"
-          value={password}
-          name="password"
+          value={formData.pw}
+          name="pw"
           onChange={handleChange}
+          class="form-control" 
         />
-      </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="confirm" className={styles.label}>Confirm Password</label>
+  </div>
+  <div className=''>
+      <label htmlFor="confirm" className=''>Confirm Password</label>
         <input
           type="password"
           autoComplete="off"
@@ -87,12 +86,13 @@ const SignupForm = (props) => {
           value={passwordConf}
           name="passwordConf"
           onChange={handleChange}
+          class="form-control"
         />
       </div>
-      <div className={styles.inputContainer}>
-        <button disabled={isFormInvalid()} className={styles.button}>Sign Up</button>
+  <div className=''>
+        <button disabled={isFormInvalid()} class="btn btn-primary m-1">Sign Up</button>
         <Link to="/">
-          <button>Cancel</button>
+          <button class="btn btn-danger m-1">Cancel</button>
         </Link>
       </div>
     </form>
