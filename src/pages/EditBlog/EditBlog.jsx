@@ -33,29 +33,39 @@ const EditBlog = (props) => {
 
   return (
     <>
-      <form
+    <form
       autoComplete="off"
       onSubmit={handleSubmit}
     > 
-      <p>Title</p>
+    <div class="mb-3">
+      <label class="form-label">Blog Title</label>
       <input
         type="text"
         value={title}
         name="title"
         onChange={handleChange}
+        class="form-control"
+        
       />
-      <br />
-      <p>Content</p>
+      </div>
+      <div class="mb-3">
+      <label class="form-label">Blog Content</label>
       <textarea
         value={content}
         name="content"
         onChange={handleChange}
+        class="form-control"
       />
-      <br />
-      <button className="btn btn-success" disabled={isFormInvalid()}>Update Post</button>
-      <Link  to="/">
-        <button className="btn btn-danger">Cancel</button>
+      </div>
+    
+      <div>
+      <button 
+        class="btn btn-primary m-1"
+        disabled={isFormInvalid()}> Update Post</button>
+      <Link to="/">
+        <button class="btn btn-danger m-1">Cancel</button>
       </Link>
+      </div>
     </form>
     </>
   );

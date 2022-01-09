@@ -35,25 +35,35 @@ const AddBlog = (props) => {
       autoComplete="off"
       onSubmit={handleSubmit}
     > 
-      <p>Title</p>
+    <div class="mb-3">
+      <label class="form-label">Blog Title</label>
       <input
         type="text"
         value={title}
         name="title"
         onChange={handleChange}
+        class="form-control"
+        
       />
-      <br />
-      <p>Content</p>
+      </div>
+      <div class="mb-3">
+      <label class="form-label">Blog Content</label>
       <textarea
         value={content}
         name="content"
         onChange={handleChange}
+        class="form-control"
       />
-      <br />
-      <button disabled={isFormInvalid()}>Post</button>
+      </div>
+    
+      <div>
+      <button 
+        class="btn btn-primary m-1"
+        disabled={isFormInvalid()}>Post</button>
       <Link to="/">
-        <button>Cancel</button>
+        <button class="btn btn-danger m-1">Cancel</button>
       </Link>
+      </div>
     </form>
   );
 }
