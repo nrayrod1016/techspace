@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #2f4454;
+  color: white;
+}
+
+
+
+li {
+  font-size: 20px;
+}
+
+
+.sub-title { 
+  color: #376e6f;
+}
+
+
+/* #2e151b  */
