@@ -15,8 +15,15 @@ const BlogDetails = (props) => {
         <>
           <h2>Comments:</h2>
           {location.state.comments.map(comment =>
-            <div key={comment._id}>
-              <p>{comment.content} - {comment.author.name}</p>
+            <div class='card' key={comment._id}>
+              <div class="card header">
+                Enter Message/Comment Symbol
+              </div>
+              <blockquote class='blockquote mb-1'>
+              <p class="card-body">{comment.content} </p>
+              <footer class="bockquote footer"> Author<cite class="Source Title"> - {comment.author.name}</cite></footer>
+              </blockquote>
+              
             </div>  
           )}
           <h2>Add a comment:</h2>
@@ -27,6 +34,8 @@ const BlogDetails = (props) => {
       
       
       <CommentForm handleAddComment={props.handleAddComment} blogId={location.state._id}/>
+
+      
     </>
   );
 }

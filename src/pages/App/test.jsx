@@ -1,13 +1,8 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import { User } from "../../../models/user";
 
-const NavBar = ({ user, handleLogout }) => {
-	return (
-		<>
-			{user ? (
-				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">TechTalk</a>
+    <a class="navbar-brand" href="#">TechTalk</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -24,7 +19,7 @@ const NavBar = ({ user, handleLogout }) => {
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-           
+            Dropdown link
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="/weather">News</a></li>
@@ -36,25 +31,20 @@ const NavBar = ({ user, handleLogout }) => {
     </div>
   </div>
 </nav>
-			) : (
-				<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				<div class="container-fluid">
-					<a class="navbar-brand" href="#">TechTalk</a>
-					<div class="collapse navbar-collapse" id="navbarNavDropdown">
-						<ul class="navbar-nav">
-							<li class="nav-item">
-								<a class="nav-link active" aria-current="page" href="/login">Log In</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="/Sign Up">Sign Up</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-			)}
-		</>
-	)
-}
 
-export default NavBar
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">TechTalk</a>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/login">Log In</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Sign Up">Sign Up</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
