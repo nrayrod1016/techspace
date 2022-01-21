@@ -5,45 +5,38 @@ const Landing = ({user}) => {
    <>
     
 
-<div class="container mb-3">
-  <div class="row">
-    <div class="col"></div>
-    <div class="col text-white">
-    hello, {user ? user.name : "friend"} !
-    </div><div class="col">
-    
-    </div>
-  </div>
-</div>
 
-<div class="container">
-      <div class="row mt-5">
-        <div class="col-md-6 text-white mt-5">
-          <h1 class="mt-5">
-            <strong>
-             Discuss the Latest news in the Tech world on 
-              <span className="sub-title"> <br/>Name Here</span>
-            </strong>
-          </h1>
-          <p class="mt-5">
-            Tons of topics from various people all over the globe. Create awesome
-            convos with others.
-          </p>
-          <button type="button" class="btn btn-danger btn-lg mt-4">
-            Get Started With Name Here
-          </button>
-        </div>
-        <div class="col-md-6 mt-5 ml-5">
-          <img
-            src="https://i.postimg.cc/3wBfBHnB/music.png"
-            class="mt-5 ml-5"
-            width="340px"
-            height="380px"
-            
-          />
-        </div>
-      </div>
-    </div>
+<section class=" 
+  
+    grid grid-cols-2 ml-1
+    sm:grid grid-cols-1 
+    md:grid-cols-2
+    lg:grid grid-cols-2">
+<article class="mt-36 p-3"> 
+  <h1 class="text-left text-2xl m-2 text-indigo-800">
+
+Hello, {user ? user.name : "new friend!"} !
+   </h1>
+
+<p class="m-2 text-gray-400">
+   Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius obcaecati in labore minus, unde atque sequi itaque minima repudiandae, cupiditate quam quae corrupti et nemo perspiciatis accusamus modi facere reiciendis?
+</p>
+
+  <div class="m-2 text-left ">
+     <button class="m-2 bg-gray-700 p-2 rounded text-gray-200  hover:bg-gray-800">Get Started</button>
+     <button class="m-2 bg-gray-300 p-2 rounded text-gray-700 hover:bg-gray-200">Learn More</button>
+  </div>
+  </article>
+
+
+  <article class="landing-right text-center h-full  "> 
+  
+  </article>
+
+
+</section> 
+
+
 
   </>
   

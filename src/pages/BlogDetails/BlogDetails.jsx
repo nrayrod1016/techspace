@@ -29,7 +29,7 @@ const BlogDetails = (props) => {
     </div>
     </section> 
 </section>
-
+<h2>Add a comment:</h2>
 <CommentForm handleAddComment={props.handleAddComment} blogId={location.state._id}/>
 
     {location.state.comments.length ? 
@@ -56,7 +56,7 @@ const BlogDetails = (props) => {
            </section>
            </div>
           )}
-          <h2>Add a comment:</h2>
+         
         </>
         :
         <h2>Add a comment:</h2>
