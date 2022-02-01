@@ -22,7 +22,7 @@ app.use(express.json())
 app.use('/api/users', usersRouter)
 app.use('/api/auth', authRouter)
 app.use('/api/blogs', blogsRouter)
-// app.use('/api/weather', weatherRouter)
+
 
 app.get('/*', function (req, res) {
   res.sendFile(
