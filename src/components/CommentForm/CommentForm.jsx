@@ -31,17 +31,41 @@ const CommentForm = (props) => {
   return (
     <>
       <form 
+          class="m-3"
         autoComplete="off"
         onSubmit={handleSubmit}
       >
         <textarea
           name="content" 
-          cols="30" 
-          rows="10"
+          class="
+                form-control
+                block
+                w-full
+                px-3
+                py-1.5
+                text-base
+                font-normal
+                text-gray-700
+                bg-white bg-clip-padding
+                border border-solid border-gray-300
+                rounded
+                transition
+                ease-in-out
+                m-0
+                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none "
           value={content}
           onChange={handleChange} 
         /><br/>
-        <button className='btn btn-success' disabled={isFormInvalid()}>Comment</button>
+        <button 
+          class="   
+                p-2   
+                bg-green-500 
+                rounded 
+                text-white 
+                hover:bg-green-300" 
+          disabled={isFormInvalid()}>
+          Comment
+        </button>
       </form>
     </>
   );

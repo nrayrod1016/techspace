@@ -7,6 +7,11 @@ const userSchema = new mongoose.Schema({
   email: { type: String, required: true, lowercase: true, unique: true },
   password: String,
   profile: {type: mongoose.Schema.Types.ObjectId, ref: "Profile"}
+},  {
+  blogs: {
+  type: mongoose.Schema.Types.ObjectId, 
+  ref: "Blog"
+}
 }, {
   timestamps: true,
 })

@@ -28,7 +28,7 @@ const NavBar = ({ user, handleLogout }) => {
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="/weather">News</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="/users">Users</a></li>
             <li><a class="dropdown-item" href="" onClick={handleLogout}>Logout</a></li>
           </ul>
         </li>

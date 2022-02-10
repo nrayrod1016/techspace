@@ -50,7 +50,7 @@ function addComment(req, res) {
   req.body.author = req.user.profile
   Blog.findById(req.params.id)
   .then(blog => {
-    blog.comments.push(req.body)
+    blog.comments.unshift(req.body)
     blog.save()
     .then(savedBlog => {
       savedBlog

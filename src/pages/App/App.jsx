@@ -4,12 +4,12 @@ import NavBar from '../../components/NavBar/NavBar'
 import Signup from '../Signup/Signup'
 import Login from '../Login/Login'
 import Landing from '../Landing/Landing'
+import UserProfile from '../UserProfile/UserProfile'
 import Users from '../Users/Users'
 import AddBlog from '../AddBlog/AddBlog'
 import Blogs from '../Blogs/Blogs'
 import BlogDetails from '../BlogDetails/BlogDetails'
 import EditBlog from '../EditBlog/EditBlog'
-import Weather from '../Weather/Weather'
 import * as authService from '../../services/authService'
 import { createBlog, getBlogs, deleteBlog, updateBlog, addComment } from '../../services/blogService'
 
@@ -75,7 +75,7 @@ const App = () => {
 				<Route path='/blogs' element={user ? <Blogs user={user} blogs={blogs} handleDeleteBlog={handleDeleteBlog} /> : <Navigate to='/login' />} />
 				<Route path='/blogDetails' element={<BlogDetails handleAddComment={handleAddComment} user={user} />} />
 				<Route path='/editBlog' element={<EditBlog handleUpdateBlog={handleUpdateBlog} />} />
-				<Route path='/weather' element={<Weather />} />
+				<Route path="/userprofile" element={<UserProfile user={user} />}/>
 			</Routes>
 		</main>
 	);

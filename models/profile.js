@@ -4,7 +4,7 @@ const profileSchema = new mongoose.Schema(
   {
     email: String,
     name: String,
-  },
+  }, 
   {
     timestamps: true,
   }

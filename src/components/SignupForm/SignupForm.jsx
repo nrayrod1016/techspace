@@ -33,6 +33,7 @@ const SignupForm = (props) => {
   
   const { name, email, password, passwordConf } = formData
   
+  //  must add formInvalid to button disabled removed due to bug 
   const isFormInvalid = () => {
     return !(name && email && password && password === passwordConf)
   }
@@ -90,7 +91,8 @@ const SignupForm = (props) => {
         />
       </div>
   <div className=''>
-        <button disabled={isFormInvalid()} class="btn btn-primary m-1">Sign Up</button>
+  
+        <button disabled={``} class="btn btn-primary m-1">Sign Up</button>
         <Link to="/">
           <button class="btn btn-danger m-1">Cancel</button>
         </Link>
